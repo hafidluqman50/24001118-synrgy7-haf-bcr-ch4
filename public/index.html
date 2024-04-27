@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Car Rental</title>
+        <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="/css/custom.css" type="text/css" rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+            integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg font--helvetica">
+                <div class="justify-content-between container flex">
+                    <div class="logo__header bg--dark-blue-04"></div>
+                    <div>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                            onclick="openNav()"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            class="navbar-collapse collapse"
+                            id="navbarSupportedContent"
+                        >
+                            <ul
+                                class="navbar-nav mb-lg-0 font--black mb-2 me-auto gap-4"
+                            >
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        aria-current="page"
+                                        href="#"
+                                        >Our Services</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Why Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Testimonial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">FAQ</a>
+                                </li>
+                                <button
+                                    class="btn bg--lime-green-04 font--bold rounded-0 font--white"
+                                >
+                                    Register
+                                </button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <aside>
+            <div id="mySidepanel" class="sidepanel">
+                <p class="sidepanel-title"><b>BCR</b></p>
+                <a
+                    href="javascript:void(0)"
+                    class="close-btn"
+                    onclick="closeNav()"
+                    >×</a
+                >
+
+                <a href="#" class="mt-2">Our Services</a>
+                <a href="#">Why Us</a>
+                <a href="#">Testimoni</a>
+                <a href="#">FAQ</a>
+                <a href="#" class="mt-2">
+                    <button
+                        class="btn bg--lime-green-04 font--bold rounded-0 font--white"
+                    >
+                        Register
+                    </button>
+                </a>
+            </div>
+            <div class="backdrop"></div>
+        </aside>
+        <main>
+            <section id="introduction" class="section-introduction">
+                <div class="row">
+                    <div class="col-md-6 col-xs-1">
+                        <div
+                            class="section-introduction__heading section-introduction__heading--padding"
+                        >
+                            <h2 class="lh-lg fw-bold">
+                                Sewa & Rental Mobil terbaik di kawasan
+                                (Lokasimu)
+                            </h2>
+                        </div>
+                        <div
+                            class="section-introduction__text section-introduction__text--padding"
+                        >
+                            <p class="fw-lighter font--size-14">
+                                Selamat datang di Binar Car Rental. Kami
+                                menyediakan mobil kualitas terbaik dengan harga
+                                terjangkau. Selalu siap melayani kebutuhanmu
+                                untuk sewa mobil selama 24 jam.
+                            </p>
+                            <a href="/cars">
+                                <button
+                                    class="btn bg--lime-green-04 rounded-0 font--white"
+                                >
+                                    Mulai Sewa Mobil
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-1 relative">
+                        <div class="section-introduction__image">
+                            <img
+                                class="position-absolute"
+                                src="https://res.cloudinary.com/dfylrgzcu/image/upload/v1710776204/c7ugipnedhwcezwzqln6.png"
+                                draggable="false"
+                            />
+                        </div>
+                        <div
+                            class="section-introduction__blue-shape bg--dark-blue-04"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+            <!-- <section id="section-filter-car" class="section-filter-car">
+                <div
+                    class="filter-car d-flex align-items-center justify-content-center container gap-3 rounded"
+                >
+                    <div class="d-flex gap-4">
+                        <div>
+                            <div class="form-group">
+                                <label>Tipe Driver</label>
+                                <select class="form-select">
+                                    <option value="" disabled selected>
+                                        Pilih Tipe Driver
+                                    </option>
+                                    <option value="dengan-sopir">
+                                        Dengan Sopir
+                                    </option>
+                                    <option value="tanpa-sopir">
+                                        Tanpa Sopir (Lepas Kunci)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-group">
+                                <label>Tanggal</label>
+                                <input type="date" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-group">
+                                <label>Waktu Jemput / Ambil</label>
+                                <input type="time" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-group">
+                                <label>Jumlah Penumpang (Optional)</label>
+                                <input type="number" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="btn btn-search bg--lime-green-04 rounded-0 font--white mt-3"
+                    >
+                        Cari Mobil
+                    </button>
+                </div>
+            </section> -->
+            <section id="benefit" class="section-benefit">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-benefit__image-layout">
+                            <img
+                                src="https://res.cloudinary.com/dfylrgzcu/image/upload/v1710002280/ykvdpr10bxfevv2ejcsv.png"
+                                draggable="false"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="lh-base section-benefit__header">
+                            <b>Best Car Rental for any kind of trip in
+                                (Lokasimu)!</b>
+                        </h2>
+                        <p>
+                            Sewa mobil di (Lokasimu) bersama Binar Car Rental
+                            jaminan harga lebih murah dibandingkan yang lain,
+                            kondisi mobil baru, serta kualitas pelayanan terbaik
+                            untuk perjalanan wisata, bisnis, wedding, meeting,
+                            dll.
+                        </p>
+                        <div class="section-benefit__list">
+                            <div class="section-benefit__list__item">
+                                <div
+                                    class="section-benefit__list__item__icon bg--dark-blue-01 gap-2 text-center"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p>Sewa Mobil Dengan Supir di Bali 12 Jam</p>
+                            </div>
+                            <div class="section-benefit__list__item">
+                                <div
+                                    class="section-benefit__list__item__icon bg--dark-blue-01 gap-2 text-center"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p>Sewa Mobil Lepas Kunci di Bali 24 Jam</p>
+                            </div>
+                            <div class="section-benefit__list__item">
+                                <div
+                                    class="section-benefit__list__item__icon bg--dark-blue-01 gap-2 text-center"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p>Sewa Mobil Jangka Panjang Bulanan</p>
+                            </div>
+                            <div class="section-benefit__list__item">
+                                <div
+                                    class="section-benefit__list__item__icon bg--dark-blue-01 gap-2 text-center"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p>Gratis Antar - Jemput Mobil di Bandara</p>
+                            </div>
+                            <div class="section-benefit__list__item">
+                                <div
+                                    class="section-benefit__list__item__icon bg--dark-blue-01 gap-2 text-center"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p>Layanan Airport Transfer/Drop In Out</p>
+                            </div>
+                            <div class="section-benefit__list__item">
+                                <div
+                                    class="section-benefit__list__item__icon bg--dark-blue-01 gap-2 text-center"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p>Tersedia Berbagai Tipe Mobil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="why-us" class="section-why-us">
+                <h2 class="why-us-header lh-base"><b>Why Us?</b></h2>
+                <p class="why-us-title mb-5 mt-4">Mengapa harus pilih Binar Car Rental?</p>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <div
+                                class="section-why-us__avatar bg--alert-warning text-center"
+                            >
+                                <i
+                                    class="fa-regular fa-thumbs-up font--white font--size-20"
+                                ></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">
+                                    Mobil Lengkap
+                                </h5>
+                                <p class="card-text">
+                                    Tersedia banyak pilihan mobil, kondisi masih
+                                    baru, bersih dan terawat
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <div
+                                class="section-why-us__avatar bg--alert-danger text-center"
+                            >
+                                <i
+                                    class="fa-solid fa-tag font--white font--size-20"
+                                ></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Harga Murah</h5>
+                                <p class="card-text">
+                                    Harga murah dan bersaing, bisa bandingkan
+                                    harga kami dengan rental mobil lain
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <div
+                                class="section-why-us__avatar bg--dark-blue-05 text-center"
+                            >
+                                <i
+                                    class="fa-regular fa-clock font--white font--size-20"
+                                ></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">
+                                    Layanan 24 Jam
+                                </h5>
+                                <p class="card-text">
+                                    Siap melayani kebutuhan Anda selama 24 jam
+                                    nonstop. Kami juga tersedia di akhir minggu
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <div
+                                class="section-why-us__avatar bg--lime-green-04 text-center"
+                            >
+                                <i
+                                    class="fa-solid fa-medal font--white font--size-20"
+                                ></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">
+                                    Sopir Professional
+                                </h5>
+                                <p class="card-text">
+                                    Sopir yang profesional, berpengalaman,
+                                    jujur, ramah dan selalu tepat waktu
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="testimonial" class="section-testimonial">
+                <div class="container-fluid">
+                    <h2 class="lh-base text-center">Testimonial</h2>
+                    <p class="mt-4 text-center">
+                        Berbagai review positif dari para pelanggan kami
+                    </p>
+                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="item m-3">
+                        <div class="card card--padding card--purple-dark">
+                            <div class="card-body gap-5">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div
+                                            class="section-testimonial__avatar"
+                                        >
+                                            <img
+                                                src="https://res.cloudinary.com/dfylrgzcu/image/upload/v1710776261/pvjs34p6lj1dfzbgzqf3.png"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="section-testimonial__star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div>
+                                            <p class="card-text fw-lighter">
+                                                “Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod lorem ipsum dolor sit
+                                                amet, consectetur adipiscing
+                                                elit, sed do eiusmod lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit, sed do eiusmod”
+                                            </p>
+                                            <p class="card-text">
+                                                John Dee 32, Bromo
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item m-3">
+                        <div class="card card--padding card--purple-dark">
+                            <div class="card-body gap-5">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div
+                                            class="section-testimonial__avatar"
+                                        >
+                                            <img
+                                                src="https://res.cloudinary.com/dfylrgzcu/image/upload/v1710776259/xbyro8qedv2c2av7zl5f.png"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="section-testimonial__star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div>
+                                            <p class="card-text fw-lighter">
+                                                “Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod lorem ipsum dolor sit
+                                                amet, consectetur adipiscing
+                                                elit, sed do eiusmod lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit, sed do eiusmod”
+                                            </p>
+                                            <p class="card-text">
+                                                John Dee 32, Bromo
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item m-3">
+                        <div class="card card--padding card--purple-dark">
+                            <div class="card-body gap-5">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div
+                                            class="section-testimonial__avatar"
+                                        >
+                                            <img
+                                                src="https://res.cloudinary.com/dfylrgzcu/image/upload/v1710776261/pvjs34p6lj1dfzbgzqf3.png"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="section-testimonial__star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div>
+                                            <p class="card-text fw-lighter">
+                                                “Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod lorem ipsum dolor sit
+                                                amet, consectetur adipiscing
+                                                elit, sed do eiusmod lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit, sed do eiusmod”
+                                            </p>
+                                            <p class="card-text">
+                                                John Dee 32, Bromo
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                id="rent"
+                class="section-rent rounded-4 d-flex flex-column justify-content-center align-items-center p-5"
+            >
+                <h2 class="lh-base fw-bold mb-4 text-center">
+                    Sewa Mobil di (Lokasimu) Sekarang
+                </h2>
+                <div class="section-rent__text-body">
+                    <p class="lh-base fw-lighter text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                    </p>
+                </div>
+                <div class="section-rent__button mt-5">
+                    <button class="btn bg--lime-green-04 rounded-0 font--white">
+                        Mulai Sewa Mobil
+                    </button>
+                </div>
+            </section>
+            <section id="faq" class="section-faq">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="lh-base fw-bold mb-4">
+                            Frequently Asked Question
+                        </h2>
+                        <p class="fw-lighter">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne"
+                                        aria-expanded="false"
+                                        aria-controls="collapseOne"
+                                    >
+                                        Apa saja syarat yang dibutuhkan?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseOne"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim
+                                        id est laborum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="collapseTwo"
+                                    >
+                                        Berapa hari minimal sewa mobil lepas
+                                        kunci ?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseTwo"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim
+                                        id est laborum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour"
+                                        aria-expanded="false"
+                                        aria-controls="collapseFour"
+                                    >
+                                        Berapa hari sebelumnya sabaiknya booking
+                                        sewa mobil?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseFour"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim
+                                        id est laborum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="collapseThree"
+                                    >
+                                        Apakah ada biaya antar jemput?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseThree"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim
+                                        id est laborum.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive"
+                                        aria-expanded="false"
+                                        aria-controls="collapseFive"
+                                    >
+                                        Bagaimana jika terjadi kecelakaan?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseFive"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim
+                                        id est laborum.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer" class="footer">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="lh-base fw-lighter mb-4">
+                        Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
+                    </p>
+                    <p class="fw-lighter mb-4">binarcarrental@gmail.com</p>
+                    <p class="fw-lighter mb-4">081-233-334-808</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="fw-bold mb-4">Our Services</p>
+                    <p class="fw-bold mb-4">Why Us</p>
+                    <p class="fw-bold mb-4">Testimonial</p>
+                    <p class="fw-bold mb-4">FAQ</p>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <p class="lh-base fw-lighter mb-4">Connect with us</p>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-brands fa-facebook font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-brands fa-instagram font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-brands fa-twitter font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-regular fa-envelope font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-brands fa-twitch font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <p class="fw-lighter mb-4">Copyright Binar 2022</p>
+                    <div class="footer__logo bg--dark-blue-05"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/scripts/bootstrap.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "220px";
+        document.getElementsByClassName('backdrop')[0].style.display = 'block';
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementsByClassName('backdrop')[0].style.display = 'none';
+    }
+</script>
+<script>
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+                // stagePadding: 0,
+            },
+            600: {
+                items: 1,
+                stagePadding: 10,
+            },
+            1000: {
+                items: 1,
+                stagePadding: 320,
+            },
+        },
+    });
+</script>

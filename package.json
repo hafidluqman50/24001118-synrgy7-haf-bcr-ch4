@@ -1,0 +1,17 @@
+{
+  "name": "binar-fsw-challenge-04",
+  "version": "1.0.0",
+  "description": "Project HTTP Server dan DOM",
+  "main": "server/index.js",
+  "author": "Hafiidh Luqmanul Hakim <hafidluqmanulhakim@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node server/index.js",
+    "start:dev": "nodemon --config nodemon.json"
+  },
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "nodemon": "^3.1.0"
+  }
+}

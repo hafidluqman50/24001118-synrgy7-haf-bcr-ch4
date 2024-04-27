@@ -1,0 +1,10 @@
+{
+    "watch": [
+        "public/*"
+    ],
+    "verbose": true,
+    "ignore": [
+        "logger/*.log"
+    ],
+    "exec": "node ./server/index.js"
+}

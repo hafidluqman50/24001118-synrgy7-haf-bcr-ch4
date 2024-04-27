@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Car Rental</title>
+        <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="./css/custom.css" type="text/css" rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+            integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+        <style>
+            .select2-selection {
+                width:100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg font--helvetica">
+                <div class="justify-content-between container flex">
+                    <div class="logo__header bg--dark-blue-04"></div>
+                    <div>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                            onclick="openNav()"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            class="navbar-collapse collapse"
+                            id="navbarSupportedContent"
+                        >
+                            <ul
+                                class="navbar-nav mb-lg-0 font--black mb-2 me-auto gap-4"
+                            >
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        aria-current="page"
+                                        href="#"
+                                        >Our Services</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Why Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Testimonial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">FAQ</a>
+                                </li>
+                                <button
+                                    class="btn bg--lime-green-04 font--bold rounded-0 font--white"
+                                >
+                                    Register
+                                </button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <aside>
+            <div id="mySidepanel" class="sidepanel">
+                <p class="sidepanel-title"><b>BCR</b></p>
+                <a
+                    href="javascript:void(0)"
+                    class="close-btn"
+                    onclick="closeNav()"
+                    >×</a
+                >
+
+                <a href="#" class="mt-2">Our Services</a>
+                <a href="#">Why Us</a>
+                <a href="#">Testimoni</a>
+                <a href="#">FAQ</a>
+                <a href="#" class="mt-2">
+                    <button
+                        class="btn bg--lime-green-04 font--bold rounded-0 font--white"
+                    >
+                        Register
+                    </button>
+                </a>
+            </div>
+            <div class="backdrop"></div>
+        </aside>
+        <main>
+            <section id="introduction" class="section-introduction">
+                <div class="row">
+                    <div class="col-md-6 col-xs-1">
+                        <div
+                            class="section-introduction__heading section-introduction__heading--padding"
+                        >
+                            <h2 class="lh-lg fw-bold">
+                                Sewa & Rental Mobil terbaik di kawasan
+                                (Lokasimu)
+                            </h2>
+                        </div>
+                        <div
+                            class="section-introduction__text section-introduction__text--padding"
+                        >
+                            <p class="fw-lighter font--size-14">
+                                Selamat datang di Binar Car Rental. Kami
+                                menyediakan mobil kualitas terbaik dengan harga
+                                terjangkau. Selalu siap melayani kebutuhanmu
+                                untuk sewa mobil selama 24 jam.
+                            </p>
+                            <button
+                                class="btn bg--lime-green-04 rounded-0 font--white"
+                            >
+                                Mulai Sewa Mobil
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-1 relative">
+                        <div class="section-introduction__image">
+                            <img
+                                class="position-absolute"
+                                src="https://res.cloudinary.com/dfylrgzcu/image/upload/v1710776204/c7ugipnedhwcezwzqln6.png"
+                                draggable="false"
+                            />
+                        </div>
+                        <div
+                            class="section-introduction__blue-shape bg--dark-blue-04"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-filter-car" class="section-filter-car">
+                <div
+                    class="filter-car d-flex align-items-center justify-content-center container gap-3 rounded"
+                >
+                    <div class="d-flex gap-3 flex-wrap" style="width:100%">
+                        
+                        <div style="max-width:25%;">
+                            <div class="form-group">
+                                <label class="mb-2">Tipe Driver</label>
+                                <select class="form-select select2" data-placeholder="Pilih Tipe Driver" id="type-driver">
+                                    <option value=""></option>
+                                    <option value="dengan-sopir">
+                                        Dengan Sopir
+                                    </option>
+                                    <option value="tanpa-sopir">
+                                        Tanpa Sopir (Lepas Kunci)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="max-width:25%;">
+                            <div class="form-group">
+                                <label class="mb-2">Tanggal</label>
+                                <input type="date" class="form-control" id="date-car" />
+                            </div>
+                        </div>
+
+                        <div style="width:30%;">
+                            <div class="form-group">
+                                <label class="mb-2">Waktu Jemput / Ambil</label>
+                                <select class="form-select select2" data-placeholder="Pilih Waktu" id="available-at">
+                                    <option></option>
+                                    <option value="08:00:00">
+                                        08.00
+                                    </option>
+                                    <option value="09:00:00">
+                                        09.00
+                                    </option>
+                                    <option value="10:00:00">
+                                        10.00
+                                    </option>
+                                    <option value="11:00:00">
+                                        11.00
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-group">
+                                <label class="mb-2">Jumlah Penumpang (Optional)</label>
+                                <input type="number" class="form-control" id="row-seat" />
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="btn btn-search btn-success bg--lime-green-04 rounded-0 font--white mt-3"
+                        id="search-car"
+                        disabled
+                    >
+                        Cari Mobil
+                    </button>
+                </div>
+            </section>
+            <section id="section-car-list" class="section-car-list">
+                <div class="container" id="container-cars">
+                    <div class="row" id="row-cars">
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer" class="footer">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="lh-base fw-lighter mb-4">
+                        Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
+                    </p>
+                    <p class="fw-lighter mb-4">binarcarrental@gmail.com</p>
+                    <p class="fw-lighter mb-4">081-233-334-808</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="fw-bold mb-4">Our Services</p>
+                    <p class="fw-bold mb-4">Why Us</p>
+                    <p class="fw-bold mb-4">Testimonial</p>
+                    <p class="fw-bold mb-4">FAQ</p>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <p class="lh-base fw-lighter mb-4">Connect with us</p>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-brands fa-facebook font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-brands fa-instagram font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-brands fa-twitter font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-regular fa-envelope font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer__circle-avatar text-center">
+                                <i
+                                    class="fa-brands fa-twitch font--white font--size-20"
+                                ></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <p class="fw-lighter mb-4">Copyright Binar 2022</p>
+                    <div class="footer__logo bg--dark-blue-05"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./scripts/bootstrap.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "220px";
+        document.getElementsByClassName("backdrop")[0].style.display = "block";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementsByClassName("backdrop")[0].style.display = "none";
+    }
+    
+    const typeDriver = document.getElementById('type-driver')
+    const dateCar = document.getElementById('date-car')
+    const availableAt = document.getElementById('available-at')
+    const searchCar = document.getElementById('search-car')
+    
+    typeDriver.onchange = (event) => {
+      if(event.target.value != '' && dateCar.value != '' && availableAt.value != '') {
+        searchCar.removeAttribute('disabled')
+      }
+    }
+    
+    dateCar.onchange = (event) => {
+      if(typeDriver.value != '' && event.target.value != '' && availableAt.value != '') {
+        searchCar.removeAttribute('disabled')
+      }
+    }
+    
+    availableAt.onchange = (event) => {
+      if(typeDriver.value != '' && dateCar.value != '' && event.target.value != '') {
+        searchCar.removeAttribute('disabled')
+      }
+    }
+</script>
+<script>
+  $(() => {
+    $('.select2').select2({
+      theme: 'bootstrap-5',
+      placeholder: function(){
+        $(this).data('placeholder');
+      },
+      allowClear: true
+    })
+  })
+</script>
+<script type="text/javascript" src="./scripts/binar.js"></script>
+<script type="text/javascript" src="./scripts/app.example.js"></script>
+<script type="text/javascript" src="./scripts/car.example.js"></script>
+<script type="text/javascript" src="./scripts/main.example.js"></script>
