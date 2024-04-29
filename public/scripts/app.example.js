@@ -9,16 +9,35 @@ class App {
   }
 
   async init() {
+    
     let self = this
+    
     this.searchCar.addEventListener('click', async function() {
       await self.load()
       self.clear()
       self.run()
     });
+    
+    this.typeDriver.onchange = (event) => {
+      if(event.target.value != '' && self.dateCar.value != '' && self.availableAt.value != '') {
+        self.searchCar.removeAttribute('disabled')
+      }
+    }
+      
+    this.dateCar.onchange = (event) => {
+      if(self.typeDriver.value != '' && event.target.value != '' && self.availableAt.value != '') {
+        self.searchCar.removeAttribute('disabled')
+      }
+    }
+    
+    this.availableAt.onchange = (event) => {
+      if(self.typeDriver.value != '' && self.dateCar.value != '' && event.target.value != '') {
+        self.searchCar.removeAttribute('disabled')
+      }
+    }
   }
 
   run = () => {
-    console.log(Car.list)
     Car.list.forEach((car) => {
       const node = document.createElement("div");
       node.classList.add('col-md-4')
@@ -28,9 +47,10 @@ class App {
   };
 
   async load() {
-    await Binar.listCars()
     
-    const getCars = JSON.parse(localStorage.getItem('CARS'))
+    const getCars = await Binar.listCars()
+    
+    console.log(getCars)
     
     const newCars = getCars.map((car) => {
       const listTypeDriver = ['dengan-sopir','tanpa-sopir']
@@ -47,11 +67,11 @@ class App {
         let date2 = new Date(car.availableAt)
         
         if(this.rowSeat.value != '') {
-          if(date2.getTime() > date1.getTime() && this.typeDriver.value == car.typeDriver && this.rowSeat.value == car.capacity) {
+          if(date2.getTime() >= date1.getTime() && this.typeDriver.value == car.typeDriver && car.capacity >= this.rowSeat.value) {
             return true
           }
         } else {
-          if(date2.getTime() > date1.getTime() && this.typeDriver.value == car.typeDriver) {
+          if(date2.getTime() >= date1.getTime() && this.typeDriver.value == car.typeDriver) {
             return true
           }
         }
