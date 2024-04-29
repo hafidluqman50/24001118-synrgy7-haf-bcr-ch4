@@ -48,7 +48,11 @@ class App {
 
   async load() {
     
-    const getCars = await Binar.listCars()
+    localStorage.removeItem('CARS')
+    
+    await Binar.listCars()
+    
+    const getCars = JSON.parse(localStorage.getItem('CARS'))
     
     console.log(getCars)
     
