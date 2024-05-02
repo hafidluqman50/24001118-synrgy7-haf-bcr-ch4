@@ -300,29 +300,6 @@
         document.getElementById("mySidepanel").style.width = "0";
         document.getElementsByClassName("backdrop")[0].style.display = "none";
     }
-    
-    const typeDriver = document.getElementById('type-driver')
-    const dateCar = document.getElementById('date-car')
-    const availableAt = document.getElementById('available-at')
-    const searchCar = document.getElementById('search-car')
-    
-    typeDriver.onchange = (event) => {
-      if(event.target.value != '' && dateCar.value != '' && availableAt.value != '') {
-        searchCar.removeAttribute('disabled')
-      }
-    }
-    
-    dateCar.onchange = (event) => {
-      if(typeDriver.value != '' && event.target.value != '' && availableAt.value != '') {
-        searchCar.removeAttribute('disabled')
-      }
-    }
-    
-    availableAt.onchange = (event) => {
-      if(typeDriver.value != '' && dateCar.value != '' && event.target.value != '') {
-        searchCar.removeAttribute('disabled')
-      }
-    }
 </script>
 <script>
   $(() => {

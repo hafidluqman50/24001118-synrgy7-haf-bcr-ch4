@@ -3,7 +3,7 @@ const { PORT = 8000 } = process.env
 
 const fs = require('fs')
 const path = require('path')
-const PUBLIC_DIRECTORY = path.join(__dirname.replace('server',''), 'public')
+const PUBLIC_DIRECTORY = path.join(process.cwd(), 'public')
 
 function loadStaticFile(fileName) {
     const getFile = path.join(PUBLIC_DIRECTORY, fileName)
